@@ -47,23 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
       display.value = currentInput || "0";
   }
 
-  function handle(value) {
-    if (value === "=") {
-        try {
-            currentInput = eval(currentInput.replace("×", "*").replace("÷", "/"));
-        } catch {
-            currentInput = "Error";
-        }
-    } else if (value === "CE" || value === "C") {
-        currentInput = "";
-    } else if (value === "←") {
-        currentInput = currentInput.toString().slice(0, -1);
-    } else {
-        currentInput += value;
-    }
-    
-    display.value = currentInput || "0";
-}
 });
 
   
